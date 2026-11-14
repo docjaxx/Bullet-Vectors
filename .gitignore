@@ -1,0 +1,19 @@
+# Blender backup / recovery files
+*.blend1
+*.blend2
+*.blend@
+*.autosave.blend
+# Generated engine cache / temporary rendering
+.godot/
+art/renders/frames/
+art/renders/*.png
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+# Never commit secrets or local authentication files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
