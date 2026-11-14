@@ -5,7 +5,7 @@
 - [x] Original angular Kestrel ship, editable Blender scene and portable GLB.
 - [x] Toon material proposal, fold-space presentation and turntable animation.
 - [x] Core loop, lane rules, weapon/enemy starting set and art principles.
-- [ ] Publish the prepared commits once GitHub connectivity/authentication works.
+- [x] Publish the visual foundation to GitHub on `main`.
 
 ## 0.1 — Playable gate slice
 
