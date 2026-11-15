@@ -13,6 +13,7 @@ fight harder as their routes disappear.
 
 - Original BV-01 Kestrel fighter, built in Blender through the connected MCP.
 - Editable separated armor, canopy, engines, guns, thruster ports and mount markers.
+- Compact fighter-style glass canopy with a flat crown and noseward-sloping windscreen.
 - Stepped toon materials, ink silhouettes, cyan ion exhaust, polygon gate backdrop.
 - Eight-second Blender turntable animation, frames 1–241 at 30 fps.
 - Portable, ship-only glTF binary for subsequent game integration.
@@ -29,6 +30,7 @@ in the Outliner to inspect individual parts. The rendered preview is in
 `art/renders/`; the engine-neutral model is `assets/ships/bv01_kestrel.glb`.
 
 [Watch the five-second turntable preview](art/renders/kestrel_turntable.mp4).
+[Inspect the canopy close-up](art/renders/kestrel_canopy_detail.jpg).
 
 To rebuild from source in Blender's Python Console:
 

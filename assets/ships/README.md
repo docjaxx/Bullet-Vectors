@@ -6,6 +6,8 @@
 - One Blender unit is one model unit. Current span is approximately 9.5 units;
   choose a uniform gameplay scale at the parent, not individual armor parts.
 - Parent: `BV01_Kestrel_ROOT`; separate parts for armor, fins, barrels and exhaust.
+- Canopy: smooth elongated glass loft, slender saddle, windscreen hoop and sill;
+  shared source geometry in `art/blender/kestrel_canopy.py`.
 - Markers: `Muzzle_L`, `Muzzle_R`, `ThrusterKick`, `Hitbox_Core`.
 - Hitbox marker is a suggested center, not a finished collision shape.
 - No collision meshes, LODs, skeletal rig or gameplay damage states yet.

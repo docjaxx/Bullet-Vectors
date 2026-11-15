@@ -6,6 +6,7 @@ uses portable PBR base materials; the Blender showcase uses stepped toon light.
 from pathlib import Path
 import math
 import random
+import runpy
 import bpy
 import bmesh
 from mathutils import Vector
@@ -177,14 +178,9 @@ for side in [-1,1]:
         y=.43+i*.22
         line(tag+' | Heat vent',[(x-.13,y,.343+i*.009),(x+.13,y,.343+i*.009)],slate,.026,True)
 
-# Faceted canopy: separate glass panels retain readability at gameplay scale.
-mesh('03 | Armored canopy frame',[(-.41,-1.5,.26),(0,-1.94,.31),(.41,-1.5,.26),
-    (.5,.26,.47),(0,.69,.48),(-.5,.26,.47),(0,-.71,1.02),(0,.15,.94)],
-    [(0,1,6),(1,2,6),(2,3,7,6),(3,4,7),(4,5,7),(5,0,6,7)],slate)
-mesh('04 | Canopy glass',[(-.32,-1.43,.49),(0,-1.74,.56),(.32,-1.43,.49),
-    (.4,.18,.70),(0,.46,.76),(-.4,.18,.70),(0,-.69,1.09),(0,.11,1.02)],
-    [(0,1,6),(1,2,6),(2,3,7,6),(3,4,7),(4,5,7),(5,0,6,7)],glass)
-line('05 | Canopy reflection',[(-.18,-1.27,.69),(-.09,-.73,1.05),(-.08,-.21,1.05)],hot,.017,True)
+# Smooth, elongated fighter canopy with a low saddle and separate windscreen.
+canopy_builder=runpy.run_path(str(Path(__file__).with_name('kestrel_canopy.py')))
+canopy_builder['build_canopy'](ship_collection,root,glass,slate,hot,ink)
 prism('06 | Nose signal chevron',[(-.19,-3,.17),(0,-3.38,.13),(.19,-3,.17),
     (.25,-2.47,.27),(0,-2.72,.26),(-.25,-2.47,.27)],.015,coral)
 line('07 | Dorsal light',[(0,.76,.47),(0,1.67,.34)],cyan,.025,True)
